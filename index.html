@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Область видимости переменной</title>
+    <link rel="stylesheet" href="1-25.css">
+</head>
+<body>
+    //1
+    <button onclick="alert('Привет!')">Нажми на меня</button><br>
+    //2
+    <button onmouseover="alert('Привет!')">Наведи на меня!</button><br>
+    //3
+    <button ondblclick="alert('Привет!')">Двойной счелчок по мне!</button><br>
+    //4 
+    <div onmouseout="alert('Привет!')">Наведи на меня мышь - а потом убери!</div><br>
+    //5
+    <input type="text" value="Ку-ку" id="test">
+    <button onclick="go()">Нажми на меня!</button><br>
+    //6
+    <input type="text" value="Ку-ку" id="test2">
+    <button onclick="go2()">Нажми на меня!</button><br>
+    //7
+    <img src="1.jpg" width="150" id="test1"><br>
+    <button onclick="go1()">Нажми на меня!</button><br>
+    //8
+    <input type="text" value="Нажми на меня!" onfocus="go3(this)"><br>
+    //9
+    <input type="text" value="Нажми на меня!" onfocus="go9(this)"><br>
+    //10
+    <input type="text" value="Нажми на меня!" onfocus="go10(this)" onblur="stop(this)"><br>
+    //11
+    <p>
+		Это input type="submit".
+	</p>
+    <input type="submit" onclick="go11(this)" value="Нажми на меня!"><br>
+    //12
+    <p>
+		Это input type="submit".
+	</p>
+	<input type="submit" onclick="go12(this)" value="Нажми на меня!"><br>
+    //13
+    <img src="1.jpg" width="150" id="test" onmouseover="over(this)" onmouseout="out(this)"><br>
+    //14
+    <input type="text" value="Ку-ку" id="test14">
+	<button onclick="go14()">Нажми на меня!</button><br>
+    //15
+    <input type="text" value="Ку-ку" id="test15">
+	<button onclick="hide()">Нажми на меня!</button>
+	<button onclick="show()">Нажми потом на меня!</button><br>
+    //16
+    <input type="text" value="Ку-ку" id="test16"> <br>
+	<button onclick="go16()">Нажми на меня!</button><br>
+    //17
+    <p>
+		Это input type="submit".
+	</p>
+	<input type="submit" onclick="block(this)" value="Нажми на меня!" id="block">
+    <input type="submit" onclick="unblock('button')" value="Нажми чтобы отблокировать элемент" 
+    style="display: none;" id="unblock"><br>
+    //18
+    <p>
+		Кнопка считает кол-во нажатий по ней.
+	</p>
+	<input type="submit" onclick="go18(this)" value="0"><br>
+    //19
+    <input type="text" value="Ку-ку" id="test19">
+	<button onclick="go19()">Нажми на меня!</button><br>
+    //20
+    <input type="text" value="Ку-ку" id="test20" class="eee www ddd">
+    <button onclick="go20()">Нажми на меня!</button><br>
+    //21
+    <input type="text" value="Привет!" id="test211">
+	<input type="text" value="Пока!" id="test212">
+	<button onclick="go21()">Нажми на меня!</button><br>
+    //22
+    <p>
+		По нажатию на кнопку в нижнем инпуте появится квадрат числа из верхнего инпута.
+	</p>
+	<input type="text" value="" placeholder="Введите число!" id="test22">
+	<input id = "result" value = "Здесь появится результат." disabled>
+	<button onclick="go22()">Нажми на меня!</button><br>
+    //23
+    <p>
+		По нажатию на кнопку в нижнем инпуте появится квадрат числа из верхнего инпута. Если введено не число - должна показаться ошибка.
+	</p>
+	<input type="text" value="" placeholder="Введите число!" id="test23"><br><br>
+	<input id = "result23" value = "Здесь появится результат." disabled><br><br>
+	<button onclick="go23()">Нажми на меня!</button><br>
+    //24
+    <p>
+		Обратите внимание на курсор в различных состояниях.
+	</p>
+	<input type="submit" onclick="go24(this)" value="Нажми на меня!"><br>
+    //25
+    <input type="text" value="" id="input">
+	<br><br>
+	<input type="submit" onclick="add('+')" value="Я добавлю +"><br>
+	<input type="submit" onclick="add('-')" value="Я добавлю -"><br>
+	<input type="submit" onclick="add('/')" value="Я добавлю /"><br>
+	<input type="submit" onclick="add('*')" value="Я добавлю *"><br>
+	<br><br>
+	<input type="submit" onclick="add('1')" value="1"><br>
+	<input type="submit" onclick="add('2')" value="2"><br>
+	<input type="submit" onclick="add('3')" value="3"><br>
+	<input type="submit" onclick="add('4')" value="4"><br>
+	<input type="submit" onclick="add('5')" value="5"><br>
+	<input type="submit" onclick="add('6')" value="6"><br>
+	<input type="submit" onclick="add('7')" value="7"><br>
+	<input type="submit" onclick="add('8')" value="8"><br>
+	<input type="submit" onclick="add('9')" value="9"><br>
+	<input type="submit" onclick="add('0')" value="0"><br>
+	<script src="1-25.js"></script>
+</body>
+</html>
